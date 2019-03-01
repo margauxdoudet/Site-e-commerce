@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html><head>
+		<meta charset="utf-8">
+		<link href="panier.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="../amazezone.js"></script>
+		<title> Amazezone.fr Panier</title>
+	</head>
+	<body>
+		<header>
+           <div id="divheader">
+                <img id="menulogo" src="images/Menu0.png" onclick="menu()"/>
+                <label id="menu" onclick="menu()">Menu </label>
+                <a href="../page_accueil/amazezone.html"><img class="header" id="logo" src="images/logo.png"  /></a>
+                <input type="text" placeholder="Rechercher" class="header" id="search" onkeypress="handle(event)">
+                <img class="header" id="searchbutton" src="images/Search.png" onclick="search()" />
+                <a href="../Panier/panier.html" id="cart"><img class="header" id="cart" src="images/Cart.png"/></a>
+            </div>
+		</header>
+        <a href="#">
+	        <div id="sidebar">
+	                <label id="livres"><mark>Livres & Audibles</mark></label>
+	                <label id="musique"><mark>Musique, DVD et Blu-Ray</mark></label>
+	                <label id="jeuxvideo"><mark>Jeux video et Consoles</mark></label>
+	                <label id="informatique"><mark>High Tech, Informatique, Bureau</mark></label>
+	                <label id="jouets"><mark>Jouets, Enfants et Bébés</mark></label>
+	                <label id="maison"><mark>Maison, Bricolage, Animalerie</mark></label>
+	                <label id="beauté"><mark>Beauté, Santé, Epicerie</mark></label>
+	                <label id="vetements"><mark>Vêtements, Chaussures, Bijoux</mark></label>
+	                <label id="sport"><mark>Sports et Loisirs</mark></label>
+	                <label id="auto"><mark>Auto et Moto</mark></label>
+	                <label id="commerce"><mark>Commerce, Industrie et Science</mark></label>
+	                <label id="handmade"><mark>Handmade</mark></label>
+	        </div>
+        </a>
+		<div id="content">
+			<div id="conteneur">
+			
+			<div id="sousconteneur">
+				<div id="element1">Votre panier</div>
+				<div id="entete"> 
+					<div id="p"> Prix </div> 
+					<div id="q"> Quantité </div>
+				</div>
+				
+				
+				<div id="garticle">
+				<hr width="100%" size="1" color="#DEDEDE" >
+				<div id="conteneurarticle1">	
+					<div id="article1" data-value="12.64">  
+						<img src="article1.jpg"></div>
+					<div id="interart">		
+						<div id="nom"> Lucky Charms <br/> <div class="stock"> En stock</div> </div>
+					<div id="ceto">
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoilevide.png"></div>
+					</div>
+						<div id="sup" onclick="sup(this, 1)"> <a> Supprimer </a> </div>
+					</div>
+					<div id="pr"> EUR 12.64 </div>
+					<input id="choice1" type="number"  onchange="calcul(this, 0)" value="0" min="0" />
+				</div>
+				</div>
+				
+				<div id="garticle">
+				<hr width="100%" size="1" color="#DEDEDE">
+				<div id="conteneurarticle2">	
+					<div id="article2" data-value="1999.99">  
+						<img src="article2.gif">
+					</div>
+					<div id="interart">		
+						<div id="nom"> Rainbow Dash <br/> <div class="stock"> En stock</div> </div>
+					<div id="ceto">
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+					</div>
+						<div id="sup" onclick="sup(this,2)"> <a> Supprimer </a> </div>
+					</div>
+					<div id="pr"> EUR 1999.99 </div>
+					<input id="choice2" type="number" onchange="calcul(this, 0)" value="0" min="0">
+				</div>
+				</div>
+				
+				<div id="garticle">
+				<hr width="100%" size="1" color="#DEDEDE">
+				<div id="conteneurarticle3">	
+					<div id="article3" data-value="10.43">  
+						<img src="article3.jpg">
+					</div>
+					<div id="interart">		
+						<div id="nom"> Skittles <br/> <div class="stock"> En stock</div> </div>
+					<div id="ceto">
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoilevide.png"></div>
+						<div class="etoile"><img src="etoilevide.png"></div>
+					</div>
+						<div id="sup" onclick="sup(this,3)"> <a> Supprimer </a> </div>
+					</div>
+					<div id="pr"> EUR 10.43 </div>
+					<input id="choice3" type="number" onchange="calcul(this, 0)" value="0" min="0">
+				</div>
+				</div>
+				
+				<div id="garticle">
+				<hr width="100%" size="1" color="#DEDEDE">
+				<div id="conteneurarticle4">	
+					<div id="article4" data-value="8.03">  
+						<img src="article4.jpg">
+					</div>
+					<div id="interart">		
+						<div id="nom"> Kit de 4 drapeaux multicolore <br/> <div class="stock"> En stock</div></div>
+					<div id="ceto">
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoilevide.png"></div>
+						<div class="etoile"><img src="etoilevide.png"></div>
+						<div class="etoile"><img src="etoilevide.png"></div>
+					</div>
+						<div id="sup" onclick="sup(this,4)"> <a> Supprimer </a> </div>
+						<div id="promo">Promo : 2 kits achetés, 1 offert </div>
+					</div>
+					<div id="pr"> EUR 8.03 </div>
+					<input id="choice4" type="number" onchange="calcul(this, 1)" value="0" min="0">
+				</div>
+				</div>
+				
+				<div id="garticle">
+				<hr width="100%" size="1" color="#DEDEDE">
+				<div id="conteneurarticle5">	
+					<div id="article5" data-value="153.72">  
+						<img src="article5.png">
+					</div>
+					<div id="interart">		
+						<div id="nom"> Kit à arcs-en-ciel <br/> <div class="stock"> En stock</div> </div>
+					<div id="ceto">
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+						<div class="etoile"><img src="etoile.png"></div>
+					</div>
+						<div id="sup" onclick="sup(this,5)"> <a> Supprimer </a> </div>
+					</div>
+						<div id="pr"> EUR 153.72 </div>
+						<input id="choice5" type="number" onchange="calcul(this, 0)" value="0" min="0">
+				</div>
+				</div>
+				
+				<hr width="100%" size="1" color="#DEDEDE">
+				<div id="total"> Sous-total (0 article) :<div class="eur"> EUR 0 </div><br> </div>
+			</div>
+				<div id="element2"> 
+					<div id="prix"> Sous-total (0 article) : <br><div class="eur"> EUR 0 </div><br> </div>
+					<div id="bouton2"> <input id="bouton2" type="checkbox" > Commande contenant un cadeau </div> </br>
+					<input id="bouton" type="submit" value="Passer la commande">
+				</div> 
+		</div>
+		<footer>
+            <div id="footerlink">
+                <div id="footer1" class="elementfooter">
+                    <h3><b>Pour mieux nous connaître</b></h3>
+                        <a href="#"><p>À propos d'Amazezone</p></a>
+                        <a href="#"><p>Carrières</p></a>
+                        <a href="#"><p>Amazezone et notre planète</p></a>
+                        <a href="#"><p>Amazezone Ensemble</p></a>
+                </div>
+                <div id="footer2" class="elementfooter">
+                    <h3><b>Gagnez du FLOUZ</b></h3>
+                        <a href="#"><p>Vendez via Amazezone</p></a>
+                        <a href="#"><p>Vendez sur Amazezone Business</p></a>
+                        <a href="#"><p>Devenez Collabo</p></a>
+                        <a href="#"><p>Expédition par Amazezone</p></a>
+                        <a href="#"><p>Faites la promo de vos produits</p></a>
+                        <a href="#"><p>publiez votre propre livre</p></a>
+                        <a href="#"><p>Amazezone Play</p></a>
+                        <a href="#"><p>› Toutes nos progs</p></a>
+                </div>
+                <div id="footer3" class="elementfooter">
+                    <h3><b>Moyens de paiement sur Amazezone</b></h3>
+                        <a href="#"><p>Carte bleue</p></a>
+                        <a href="#"><p>Paiement en plusieurs fois</p></a>
+                        <a href="#"><p>Amazezone Conversion</p></a>
+                        <a href="#"><p>Chèque-cadeaux</p></a>
+                        <a href="#"><p>Recharge du compte</p></a>
+                </div>
+                <div id="footer4" class="elementfooter">
+                    <h3><b>Besoin d'aide ?</b></h3>
+                        <a href="#"><p>Visualiser ou suivre vos commandes</p></a>
+                        <a href="#"><p>Tarifs et options de livraison</p></a>
+                        <a href="#"><p>Amazezone Prime</p></a>
+                        <a href="#"><p>Retours et remplacements</p></a>
+                        <a href="#"><p>Informations sur notre Marketplace</p></a>
+                        <a href="#"><p>Application Amazezone Mobile</p></a>
+                        <a href="#"><p>Amazezone Assistant</p></a>
+                        <a href="#"><p>Aide</p></a>
+                </div>
+            </div>
+            <hr/>
+            <div id="footerlogo">
+                <a href="../page_accueil/amazezone.html"><img class="header" id="logo" src="images/logo.png"  /></a>
+            </div>
+            <div id="footercountries">
+                <p><a href="#">Australie</a> | <a href="#">Allemagne</a> | <a href="#">Brésil</a> | <a href="#">Canada</a> | <a href="#">Chine</a> | <a href="#">Espagne</a> | <a href="#">États-Unis</a> | <a href="#">Inde</a> | <a href="#">Italie</a> | <a href="#">Japon</a> | <a href="#">Mexique</a> | <a href="#">Pays-Bas</a> | <a href="#">Royaume-Uni</a></p>
+            </div>
+            <hr/>
+            <div id="conditionsgenerales">
+                <p>Conditions générales de vente | Vos informations personnelles | Cookies et Publicité sur Internet© 1996-2018, Amazezone.com, Inc. ou ses filiales.</p>
+            </div>
+        </footer>
+		</div>

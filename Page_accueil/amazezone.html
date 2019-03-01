@@ -1,0 +1,186 @@
+	<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<title>Amazezone.fr</title>
+		<link  href="amazezone.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../amazezone.js"></script>
+	</head>
+	<body>
+        
+        <header>
+            <div id="divheader">
+                <img id="menulogo" src="images/Menu0.png" onclick="menu()"/>
+                <label id="menu" onclick="menu()">Menu </label>
+                <a href="../page_accueil/amazezone.html"><img class="header" id="logo" src="images/logo.png"  /></a>
+                <input type="text" placeholder="Rechercher" class="header" id="search" onkeypress="handle(event)">
+                <img class="header" id="searchbutton" src="images/Search.png" onclick="search()" />
+                <a href="../Panier/panier.html" id="cart" onmouseenter="dispCart()" onmouseleave="undispCart()"><img class="header" id="cart" src="images/Cart.png"/></a>
+            </div>
+			<div class="tooltiptext">
+            <div id="carticle1">
+                <img src="Images/article1.jpg" onclick="suppr(1)">
+				<div class="titretprix">
+				 <p class="titre">Lucky Charms</p>
+                <p class="prix">EUR 12.64</p>
+				</div>
+            </div>
+            <div id="carticle2">
+                <img src="Images/article2.gif" onclick="suppr(2)">
+				<div class="titretprix">
+				<p class="titre">Rainbow Dash</p>
+                <p class="prix">EUR 1999.99</p>
+				</div>
+            </div>
+            <div id="carticle3">
+                <img src="Images/article3.jpg" onclick="suppr(3)">
+				<div class="titretprix">
+				<p class="titre">Skittles</p>
+                <p class="prix">EUR 10.43</p>
+				</div>
+            </div>
+            <div id="carticle4">
+                <img src="Images/article4.jpg" onclick="suppr(4)">
+				<div class="titretprix">
+				<p class="titre">Kit de 4 drapeaux multicolores</p>
+                <p class="prix">EUR 8.03</p>
+				</div>
+            </div>
+            <div id="carticle5">
+                <img src="Images/article5.png" onclick="suppr(5)">
+				<div class="titretprix">
+				<p class="titre">Kit à arcs-en-ciel</p>
+                <p class="prix">EUR 153.72</p>
+            </div>
+			</div>
+        </div>
+        </header>
+         <a href="">
+	        <div id="sidebar">
+	                <label id="livres"><mark>Livres & Audibles</mark></label>
+	                <label id="musique"><mark>Musique, DVD et Blu-Ray</mark></label>
+	                <label id="jeuxvideo"><mark>Jeux video et Consoles</mark></label>
+	                <label id="informatique"><mark>High Tech, Informatique, Bureau</mark></label>
+	                <label id="jouets"><mark>Jouets, Enfants et Bébés</mark></label>
+	                <label id="maison"><mark>Maison, Bricolage, Animalerie</mark></label>
+	                <label id="beauté"><mark>Beauté, Santé, Epicerie</mark></label>
+	                <label id="vetements"><mark>Vêtements, Chaussures, Bijoux</mark></label>
+	                <label id="sport"><mark>Sports et Loisirs</mark></label>
+	                <label id="auto"><mark>Auto et Moto</mark></label>
+	                <label id="commerce"><mark>Commerce, Industrie et Science</mark></label>
+	                <label id="handmade"><mark>Handmade</mark></label>
+	        </div>
+        </a>
+		<div id="content">
+            <div id="ads_banner">
+                <img src="images/img_frais.jpg" width="100%">
+                <div id="arrows">
+                    <img src="Images/icon_scroll_left.png" height="100%" onclick="changeimgleft()"/>
+                    <img src="Images/icon_scroll_right.png" height="100%" onclick="changeimgright()"/>
+                </div>
+            </div>
+            <div id="recommandations">
+                <p>Inspiré par votre historique de navigation</p>
+            </div>
+            <div id="articles">
+                <div id="article1" class="arts">
+                    <p class="titre">Lucky Charms</p>
+                    <img src="Images/article1.jpg">
+                    <p class="description">Ces céréales sont idéales pour monter au Septième Ciel!<br/>Mmmmmmmmh Lucky Charms!</p>
+                    <br/>
+                    <p class="prix">EUR 12.64</p>
+                    <input type="button" value="Ajouter au panier" onclick="panier(1)"/>
+                    <br/>
+                </div>
+                <div id="article2" class="arts">
+                    <p class="titre">Rainbow Dash</p>
+                    <img src="Images/article2.gif">
+                    <p class="description">Un véritable poney capable de se déplacer à la vitesse du son.<br/>Livré avec une corne!</p>
+                    <br/>
+                    <p class="prix">EUR 1999.99</p>
+                    <input type="button" value="Ajouter au panier" onclick="panier(2)"/>
+                    <br/>
+                </div>
+                <div id="article3" class="arts">
+                    <p class="titre">Skittles</p>
+                    <img src="Images/article3.jpg">
+                    <p class="description">Bonbons fruités pour égayer votre journée (produits dans une ferme à girafes biologique et responsable)!</p>
+                    <br/>
+                    <p class="prix">EUR 10.43</p>
+                    <input type="button" value="Ajouter au panier" onclick="panier(3)"/>
+                    <br/>
+                </div>
+                <div id="article4" class="arts">
+                    <p class="titre">Kit de 4 drapeaux multicolores</p>
+                    <img src="Images/article4.jpg">
+                    <p class="description">De magnifiques drapeaux à utiliser quand vous voulez. Ils sont surtout les bienvenues lors de manifestations!</p>
+                    <div id="promo">Promo : 2 kits achetés, 1 offert </div>
+                    <p class="prix">EUR 8.03</p>
+                    <input type="button" value="Ajouter au panier" onclick="panier(4)"/>
+                    <br/>
+                </div>
+                <div id="article5" class="arts">
+                    <p class="titre">Kit à arcs-en-ciel</p>
+                    <img src="Images/article5.png">
+                    <p class="description">Quoi de plus joyeux que de faire des arcs-en-ciel avec votre famille! Achetez le kit à arcs-en-ciel, pour des week-ends démentiels!</p><br/>
+                    <p class="prix">EUR 153.72</p>
+                    <input type="button" value="Ajouter au panier" onclick="panier(5)"/>
+                    <br/>
+                </div>
+            </div>
+    </div>
+<footer>
+            <div id="footerlink">
+                <div id="footer1" class="elementfooter">
+                    <h3><b>Pour mieux nous connaître</b></h3>
+                        <a href=""><p>À propos d'Amazezone</p></a>
+                        <a href=""><p>Carrières</p></a>
+                        <a href=""><p>Amazezone et notre planète</p></a>
+                        <a href=""><p>Amazezone Ensemble</p></a>
+                </div>
+                <div id="footer2" class="elementfooter">
+                    <h3><b>Gagnez du FLOUZ</b></h3>
+                        <a href=""><p>Vendez via Amazezone</p></a>
+                        <a href=""><p>Vendez sur Amazezone Business</p></a>
+                        <a href=""><p>Devenez Collabo</p></a>
+                        <a href=""><p>Expédition par Amazezone</p></a>
+                        <a href=""><p>Faites la promo de vos produits</p></a>
+                        <a href=""><p>publiez votre propre livre</p></a>
+                        <a href=""><p>Amazezone Play</p></a>
+                        <a href=""><p>› Toutes nos progs</p></a>
+                </div>
+                <div id="footer3" class="elementfooter">
+                    <h3><b>Moyens de paiement sur Amazezone</b></h3>
+                        <a href=""><p>Carte bleue</p></a>
+                        <a href=""><p>Paiement en plusieurs fois</p></a>
+                        <a href=""><p>Amazezone Conversion</p></a>
+                        <a href=""><p>Chèque-cadeaux</p></a>
+                        <a href=""><p>Recharge du compte</p></a>
+                </div>
+                <div id="footer4" class="elementfooter">
+                    <h3><b>Besoin d'aide ?</b></h3>
+                        <a href=""><p>Visualiser ou suivre vos commandes</p></a>
+                        <a href=""><p>Tarifs et options de livraison</p></a>
+                        <a href=""><p>Amazezone Prime</p></a>
+                        <a href=""><p>Retours et remplacements</p></a>
+                        <a href=""><p>Informations sur notre Marketplace</p></a>
+                        <a href=""><p>Application Amazezone Mobile</p></a>
+                        <a href=""><p>Amazezone Assistant</p></a>
+                        <a href=""><p>Aide</p></a>
+                </div>
+            </div>
+            <hr/>
+            <div id="footerlogo">
+                <a href="amazezone.html"><img class="header" id="logo" src="images/logo.png"  /></a>
+            </div>
+            <div id="footercountries">
+                <p><a href="">Australie</a> | <a href="">Allemagne</a> | <a href="">Brésil</a> | <a href="">Canada</a> | <a href="">Chine</a> | <a href="">Espagne</a> | <a href="">États-Unis</a> | <a href="">Inde</a> | <a href="">Italie</a> | <a href="">Japon</a> | <a href="">Mexique</a> | <a href="">Pays-Bas</a> | <a href="">Royaume-Uni</a></p>
+            </div>
+            <hr/>
+            <div id="conditionsgenerales">
+                <p>Conditions générales de vente | Vos informations personnelles | Cookies et Publicité sur Internet© 1996-2018, Amazezone.com, Inc. ou ses filiales.</p>
+            </div>
+        </footer>
+		</div>
+		
+	</body>
+</html>
